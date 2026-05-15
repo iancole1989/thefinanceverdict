@@ -1,0 +1,52 @@
+---
+import { SITE } from "@/lib/site";
+import AffiliateDisclosure from "@/components/AffiliateDisclosure.astro";
+
+const year = new Date().getFullYear();
+---
+
+<footer class="bg-canvas-subtle border-t border-line mt-20">
+  <div class="container-wide py-12">
+    <div class="grid md:grid-cols-3 gap-8 mb-10">
+      <div>
+        <a href="/" class="flex items-center gap-2.5 mb-3">
+          <span class="block w-7 h-7 bg-navy-deep text-gold font-heading font-extrabold text-sm rounded-sm flex items-center justify-center">V</span>
+          <span class="font-heading font-extrabold text-navy-deep text-lg tracking-tight">
+            {SITE.name}
+          </span>
+        </a>
+        <p class="text-sm text-caution leading-relaxed">
+          {SITE.tagline}
+        </p>
+      </div>
+
+      <div>
+        <h4 class="text-xs font-bold uppercase tracking-wider text-navy-deep mb-3">Site</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/reviews" class="text-navy-charcoal hover:text-gold-hover">Reviews</a></li>
+          <li><a href="/comparisons" class="text-navy-charcoal hover:text-gold-hover">Comparisons</a></li>
+          <li><a href="/calculators" class="text-navy-charcoal hover:text-gold-hover">Calculators</a></li>
+          <li><a href="/about" class="text-navy-charcoal hover:text-gold-hover">About</a></li>
+          <li><a href="/editorial-standards" class="text-navy-charcoal hover:text-gold-hover">Editorial Standards</a></li>
+          <li><a href="/contact" class="text-navy-charcoal hover:text-gold-hover">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="text-xs font-bold uppercase tracking-wider text-navy-deep mb-3">Legal</h4>
+        <ul class="space-y-2 text-sm">
+          <li><a href="/affiliate-disclosure" class="text-navy-charcoal hover:text-gold-hover">Affiliate Disclosure</a></li>
+          <li><a href="/privacy" class="text-navy-charcoal hover:text-gold-hover">Privacy Policy</a></li>
+          <li><a href="/sitemap-index.xml" class="text-navy-charcoal hover:text-gold-hover">Sitemap</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <AffiliateDisclosure variant="compact" />
+
+    <div class="mt-8 pt-6 border-t border-line text-xs text-caution flex flex-wrap items-center justify-between gap-3">
+      <span>© {year} {SITE.name}. Independent reviews of personal finance tools. Not financial advice — consult a licensed professional for advice specific to your situation.</span>
+      <span>v1.0</span>
+    </div>
+  </div>
+</footer>

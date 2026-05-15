@@ -1,0 +1,56 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { SITE } from "@/lib/site";
+---
+
+<BaseLayout title="About" description={`About ${SITE.name} — independent reviews of personal finance tools.`}>
+  <section class="container-article py-12 md:py-16">
+    <h1 class="font-heading font-extrabold text-4xl md:text-5xl text-navy-deep tracking-tight">
+      About this site.
+    </h1>
+
+    <div class="prose prose-lg max-w-none mt-6">
+      <p>
+        The Finance Verdict reviews personal finance tools — budgeting apps, credit monitoring
+        services, investing platforms, tax software, banks, and debt-management products.
+        We exist because most reviews in this category are either thinly-veiled affiliate
+        content or jargon-heavy walls of text that don't answer the only question that
+        matters: should you actually use this thing?
+      </p>
+
+      <p>
+        Every tool we review is used by someone on our team for at least 14 days in a real
+        workflow before we publish a verdict. We document the friction other reviewers gloss
+        over — the broken Plaid connections, the support tickets that take three days to
+        resolve, the upsells buried in the onboarding flow, the cancellation paths that
+        require a phone call. Then we write the verdict we wish we'd had when we were
+        choosing the tool.
+      </p>
+
+      <h2>What we cover</h2>
+      <ul>
+        <li>Budgeting apps — YNAB, Monarch Money, Rocket Money, EveryDollar, Copilot, Tiller, Quicken, Simplifi.</li>
+        <li>Credit monitoring — Credit Karma, Experian, MyFICO, IdentityIQ, LifeLock, Identity Guard.</li>
+        <li>Investing platforms and trackers — Empower (Personal Capital), M1 Finance, Wealthfront, Betterment, Robinhood.</li>
+        <li>Tax software — TurboTax, H&amp;R Block, FreeTaxUSA, Cash App Taxes, TaxSlayer, TaxAct.</li>
+        <li>Banking and savings — SoFi, Marcus, Ally, Discover, Capital One 360, Chime, Varo.</li>
+        <li>Debt management — National Debt Relief, Freedom Debt Relief, and the debt-consolidation landscape.</li>
+        <li>Calculators — budget, debt payoff, savings goal, emergency fund, retirement, and more.</li>
+      </ul>
+
+      <h2>What we don't do</h2>
+      <ul>
+        <li>We don't recommend a tool we wouldn't use ourselves, even when the commission would be higher.</li>
+        <li>We don't accept free premium tiers in exchange for coverage.</li>
+        <li>We don't write financial advice. We write product reviews. For advice on your specific situation, talk to a licensed advisor.</li>
+        <li>We don't share email subscribers with affiliate partners.</li>
+      </ul>
+
+      <p>
+        Read our <a href="/editorial-standards">editorial standards</a> for specifics on how
+        we source, test, review, and update content. If we ever get something wrong, write
+        to corrections@thefinanceverdict.com and we'll fix it.
+      </p>
+    </div>
+  </section>
+</BaseLayout>

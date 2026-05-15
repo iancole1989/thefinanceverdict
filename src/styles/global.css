@@ -1,0 +1,41 @@
+@import "@fontsource-variable/dm-sans/index.css";
+@import "@fontsource-variable/dm-sans/wght-italic.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-canvas-subtle text-navy-charcoal font-sans;
+    font-feature-settings: "ss01", "ss02";
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-heading text-navy-deep tracking-tight;
+  }
+
+  ::selection {
+    background: #B5C7A8;
+    color: #1A2424;
+  }
+}
+
+@layer components {
+  .container-article {
+    @apply max-w-article mx-auto px-5 sm:px-6;
+  }
+
+  .container-wide {
+    @apply max-w-6xl mx-auto px-5 sm:px-8;
+  }
+}

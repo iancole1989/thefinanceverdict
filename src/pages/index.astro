@@ -1,0 +1,139 @@
+---
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import { getCollection } from "astro:content";
+import { SITE } from "@/lib/site";
+
+const now = Date.now();
+const articles = (
+  await getCollection(
+    "articles",
+    ({ data }) => !data.draft && data.publishedAt.valueOf() <= now,
+  )
+).sort((a, b) => b.data.publishedAt.valueOf() - a.data.publishedAt.valueOf());
+
+const CATEGORIES = [
+  "Budgeting",
+  "Credit monitoring",
+  "Investing",
+  "Tax software",
+  "Banking",
+  "Debt management",
+];
+---
+
+<BaseLayout title={SITE.name} description={SITE.description}>
+  <section class="container-wide py-16 md:py-24">
+    <div class="max-w-3xl">
+      <p class="text-sm font-semibold uppercase tracking-wider text-gold mb-3">
+        Independent reviews — no payola, no shilling
+      </p>
+      <h1 class="font-heading font-extrabold text-4xl md:text-5xl lg:text-6xl tracking-tight text-navy-deep leading-[1.1]">
+        Honest verdicts on the tools that shape your money.
+      </h1>
+      <p class="mt-6 text-lg md:text-xl text-navy-charcoal leading-relaxed">
+        Independent reviews and head-to-head comparisons of budgeting apps, credit monitoring,
+        investing platforms, tax software, banking, and debt management. We test the tool.
+        We rate it. You decide.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-2">
+        {CATEGORIES.map((c) => (
+          <span class="inline-block text-xs font-semibold uppercase tracking-wider text-navy-charcoal bg-canvas-card border border-line rounded-sm px-3 py-1.5">
+            {c}
+          </span>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="container-wide pb-20">
+    <div class="flex items-end justify-between mb-8">
+      <h2 class="font-heading font-bold text-2xl md:text-3xl text-navy-deep">
+        Latest verdicts
+      </h2>
+      <span class="text-sm text-caution">
+        {articles.length} {articles.length === 1 ? "verdict" : "verdicts"}
+      </span>
+    </div>
+
+    {
+      articles.length === 0 ? (
+        <div class="bg-canvas-subtle border border-line rounded-md p-10 text-center">
+          <p class="font-heading font-bold text-xl text-navy-deep mb-2">First verdicts publishing soon</p>
+          <p class="text-navy-charcoal max-w-md mx-auto">
+            We're finishing the first wave of hands-on tool reviews. YNAB, Monarch Money,
+            Rocket Money, FreeTaxUSA vs TurboTax — all landing within the next two weeks.
+          </p>
+        </div>
+      ) : (
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          {articles.map((article) => (
+            <a
+              href={`/${article.slug}/`}
+              class="group block bg-canvas-white border border-line rounded-md overflow-hidden hover:border-gold hover:shadow-sm transition-all"
+            >
+              {article.data.heroImage && (
+                <div class="aspect-[1200/630] overflow-hidden bg-canvas-subtle">
+                  <img
+                    src={article.data.heroImage}
+                    alt={article.data.heroImageAlt ?? ""}
+                    class="w-full h-full object-cover group-hover:scale-[1.02] transition-transform duration-300"
+                    loading="lazy"
+                  />
+                </div>
+              )}
+              <div class="p-5">
+                {article.data.isPillar && (
+                  <span class="inline-block text-xs font-bold uppercase tracking-wider text-gold mb-2">
+                    Pillar guide
+                  </span>
+                )}
+                {article.data.isComparison && (
+                  <span class="inline-block text-xs font-bold uppercase tracking-wider text-gold mb-2">
+                    Comparison
+                  </span>
+                )}
+                <h3 class="font-heading font-bold text-lg text-navy-deep group-hover:text-gold-hover transition-colors leading-snug">
+                  {article.data.title}
+                </h3>
+                <p class="mt-2 text-sm text-navy-charcoal leading-relaxed line-clamp-3">
+                  {article.data.description}
+                </p>
+              </div>
+            </a>
+          ))}
+        </div>
+      )
+    }
+  </section>
+
+  <section class="bg-canvas-subtle border-y border-line">
+    <div class="container-wide py-14 md:py-16">
+      <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div>
+          <h2 class="font-heading font-bold text-2xl md:text-3xl text-navy-deep mb-3">
+            Why we wrote this site.
+          </h2>
+          <p class="text-navy-charcoal leading-relaxed">
+            Most personal-finance reviews read like sponsored content for the highest-paying
+            affiliate. We use each tool for a real workflow before publishing a verdict,
+            and we name the friction other reviewers gloss over.
+          </p>
+        </div>
+        <div>
+          <h2 class="font-heading font-bold text-2xl md:text-3xl text-navy-deep mb-3">
+            How we work.
+          </h2>
+          <ul class="text-navy-charcoal leading-relaxed space-y-2 text-sm">
+            <li>→ Every tool reviewed after at least 14 days of hands-on use.</li>
+            <li>→ We disclose every affiliate partnership. Compensation never decides the verdict.</li>
+            <li>→ We don't accept free premium tiers in exchange for coverage.</li>
+            <li>→ Reviews refreshed quarterly or whenever a product materially changes.</li>
+          </ul>
+          <p class="mt-3 text-sm">
+            <a href="/editorial-standards" class="text-gold underline">Read our editorial standards →</a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,3 @@
+# thefinanceverdict.com — Cloudflare Pages redirects
+# Format: /old-path  /new-path  STATUS
+# Empty for now — this is a brand-new domain with no legacy URLs to migrate.

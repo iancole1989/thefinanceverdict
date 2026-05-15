@@ -1,0 +1,25 @@
+---
+import CTAButton from "@/components/CTAButton.astro";
+
+export interface Props {
+  headline?: string;
+  body?: string;
+  ctaLabel?: string;
+  ctaHref?: string;
+}
+
+const {
+  headline = "Honest backyard wellness reviews — every two weeks.",
+  body = "We test hot tubs, saunas, and cold plunges. No 'best ever!' superlatives. No commission-driven rankings. Real specs, install costs, and owner reality. Drop your email for the next batch.",
+  ctaLabel = "Subscribe →",
+  ctaHref = "mailto:hello@thefinanceverdict.com?subject=Subscribe",
+} = Astro.props;
+---
+
+<aside class="my-8 bg-canvas-subtle border-l-4 border-gold rounded-r-md p-6">
+  <h3 class="font-heading font-bold text-xl text-navy-deep mb-2">{headline}</h3>
+  <p class="text-navy-charcoal leading-relaxed mb-4">{body}</p>
+  <CTAButton href={ctaHref} variant="primary" ctaType="newsletter-signup">
+    {ctaLabel}
+  </CTAButton>
+</aside>
