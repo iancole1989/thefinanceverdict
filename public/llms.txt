@@ -1,0 +1,31 @@
+# The Finance Verdict
+
+> Independent, hands-on reviews and head-to-head comparisons of personal finance tools — budgeting apps, credit monitoring, investing platforms, tax software, banking, and debt relief. We test the product, document the trade-offs, and give a plain verdict. Editorial content, not financial advice.
+
+The Finance Verdict publishes independent assessments of consumer finance products. Content is funded by affiliate links (see /affiliate-disclosure/) and produced under documented testing and review standards (see /editorial-standards/). We aim to surface the real fees, the upsell tactics, and who each tool actually suits.
+
+## Reviews
+- [YNAB Review (2026)](https://thefinanceverdict.com/ynab-review/): Is You Need A Budget worth $109 a year?
+- [Monarch Money Review (2026)](https://thefinanceverdict.com/monarch-money-review/): The Mint replacement, tested for 30 days.
+- [Rocket Money Review (2026)](https://thefinanceverdict.com/rocket-money-review/): Useful free tier, questionable premium.
+- [Credit Karma Review (2026)](https://thefinanceverdict.com/credit-karma-review/): Free credit scores, aggressive marketing.
+- [Experian Review (2026)](https://thefinanceverdict.com/experian-review/): Free credit monitoring, Boost, and the upsell.
+- [LifeLock Review (2026)](https://thefinanceverdict.com/lifelock-review/): Is Norton's identity protection worth it?
+- [Chime Review (2026)](https://thefinanceverdict.com/chime-review/): Fee-free banking, with real trade-offs.
+- [SoFi Review (2026)](https://thefinanceverdict.com/sofi-review/): One app for banking, investing, and borrowing.
+- [Empower (Personal Capital) Review (2026)](https://thefinanceverdict.com/empower-personal-capital-review/): Free tool, salesy calls.
+- [Freedom Debt Relief Review (2026)](https://thefinanceverdict.com/freedom-debt-relief-review/): Is it legit and worth the cost?
+- [National Debt Relief Review (2026)](https://thefinanceverdict.com/national-debt-relief-review/): Honest verdict on debt settlement.
+
+## Comparisons
+- [Monarch Money vs Rocket Money (2026)](https://thefinanceverdict.com/monarch-vs-rocket-money/): Which budgeting app wins?
+- [YNAB vs Monarch Money (2026)](https://thefinanceverdict.com/ynab-vs-monarch-money/): Which budgeting app wins?
+- [Fidelity vs Robinhood (2026)](https://thefinanceverdict.com/fidelity-vs-robinhood/): Which broker should hold your money?
+- [Wealthfront vs Betterment (2026)](https://thefinanceverdict.com/wealthfront-vs-betterment/): Which robo-advisor is right for you?
+- [TurboTax vs H&R Block (2026)](https://thefinanceverdict.com/turbotax-vs-hr-block/): Cheaper, slicker, or an office down the road?
+- [FreeTaxUSA vs TurboTax (2026)](https://thefinanceverdict.com/freetaxusa-vs-turbotax/): The $150 difference that doesn't matter.
+
+## About
+- [Editorial Standards](https://thefinanceverdict.com/editorial-standards/): How content is sourced, tested, and reviewed.
+- [Affiliate Disclosure](https://thefinanceverdict.com/affiliate-disclosure/): How the site is funded.
+- [About](https://thefinanceverdict.com/about/)
